@@ -1,3 +1,4 @@
+from __future__ import division
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,7 +12,7 @@ def plot_results(games):
     x = range(1, len(chance_noset)+1)
     y = chance_noset.values
     plt.plot(x,y,'b-o',label='Distribution from 100,000 games')
-    plt.plot(x,[0.01]*20,'r-',label='Probability according to rulebook')
+    plt.plot(x,[1/34]*20,'r-',label='Probability according to rulebook')
     xticks = [5,10,15,20]
     plt.xticks(xticks, xticks)
     plt.xlabel('Turn')
